@@ -61,3 +61,34 @@ Projeto web de um site de notícias, com um módulo para os administradores faze
 
    </blockquote>
 
+   Feito isso, salve as alterações no arquivo <code> C:\xampp\apache\conf\extra </code> e reinicie o servidor.
+
+<ul>
+    <li>Para acessar o módulo do público digite no navegador: <code>noticias.localhost</code></li>
+    <li>Para acessar o módulo do administrador digite no navegador: <code>dashnoticias.localhost</code>
+    </li>
+</ul>
+
+<blockquote>
+    Caso utilize o servidor embutido do php basta apenas navegar até <code>C:\xampp\htdocs\Noticias\frontend\web</code> <code>php -S localhost:8080</code> e <code>C:\xampp\htdocs\Noticias\backend\web</code> <code>php -S localhost:8081</code> 
+</blockquote>
+
+<blockquote>
+    Após configurar a aplicação, entre no editor de código de sua preferência, e rode os seguintes comandos: 
+
+  <li><code>php init</code> (A aplicação ira criar os arquivos de index nas pastas web dos dois módulos)</li>
+    
+  <li><code>php yii migrate</code> (A aplicação ira criar todas as tabelas necessárias para utilização)</li>
+  OBS: Antes de rodar o comando das migrations, é necessário criar um banco de dados no seu mysql, e informar o nome do banco e demais informações do mysql no arquivo <code>Noticias\environments\dev\common\config\main-local.php</code>. Após fazer isso, é só rodar um <code>php init</code> novamente e a aplicação já estará funcionando.
+<blockquote>
+
+<h3>Imagens do módulo adm: </h3>
+
+<img src="screens/Postagens.PNG">
+<img src="screens/criarPostagens.PNG"><br>
+<img src="screens/AdicionarCategoria.PNG"><br>
+
+<h3>Imagens do módulo visitante: </h3>
+
+<img src="screens/PainelNoticias.PNG">
+<img src="screens/vizualizarNoticia.PNG"><br>
