@@ -12,24 +12,26 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="postagens-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
+    
     <p>
-        <?= Html::a('Create Postagens', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Adicionar postagem', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'titulo',
             'descricao',
-            'idCategoria',
+            //'idCategoria',
+            [
+                'attribute' => 'idCategoria',
+                'value' => 'categoria.nome',
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

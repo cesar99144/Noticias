@@ -25,7 +25,7 @@ use yii\bootstrap\Nav;
                 'encodeLabels' => false,
                 'options' => ['class' => 'sidebar-menu'],
                 'items' => [
-                    '<li class="header">Menu Yii2</li>',
+                    '<li class="header">Menu</li>',
                     ['label' => '<i class="fa fa-file-code-o"></i><span>Categorias</span>', 'url' => ['/categorias']],
                     ['label' => '<i class="fa fa-dashboard"></i><span>Postagens</span>', 'url' => ['/postagens']],
                     [
