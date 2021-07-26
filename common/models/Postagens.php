@@ -44,9 +44,9 @@ class Postagens extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'titulo' => 'Titulo',
+            'titulo' => 'Título',
             'descricao' => 'Descricao',
-            'idCategoria' => 'Id Categoria',
+            'idCategoria' => 'Categoria',
         ];
     }
 
@@ -55,7 +55,7 @@ class Postagens extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery|CategoriasQuery
      */
-    public function getIdCategoria0()
+    public function getCategoria()
     {
         return $this->hasOne(Categorias::className(), ['id' => 'idCategoria']);
     }
