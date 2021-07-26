@@ -13,17 +13,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="postagens-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
+<div id="painel">
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
+       
+        <a class="btn btn-primary" href="/Compartilhar">Compartilhar</a>
+        <a class="btn btn-danger" href="/postagens">Voltar</a>
     </p>
 
     <?= DetailView::widget([
@@ -36,4 +30,5 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+</div>
 </div>
