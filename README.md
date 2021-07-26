@@ -91,4 +91,3 @@ Projeto web de um site de notícias, com um módulo para os administradores faze
 <h3>Imagens do módulo visitante: </h3>
 
 <img src="screens/PainelNoticias.PNG">
-<img src="screens/vizualizarNoticia.PNG"><br>
