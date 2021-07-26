@@ -15,12 +15,14 @@ Projeto web de um site de notícias, com um módulo para os administradores faze
 </blockquote>
     <ul>
       <li>Navegar até o diretório <code>C:\xampp\apache\conf\extra</code></li>
-      <li>Abrir o arquivo <code>httpd-vhosts.conf</code> e adicionar as seguintes informações: </li>
-      <code>
-        < VirtualHost *:80 >
-            ServerName noticias.localhost
+      <li>Abrir o arquivo <code>httpd-vhosts.conf</code> e adicionar as seguintes informações: </li> <br>
+    </ul>
+    <blockquote>
+
+        <VirtualHost *:80>
+           ServerName noticias.localhost
             DocumentRoot "C:\xampp\htdocs\Noticias\frontend\web"
-            
+
             <Directory "C:\xampp\htdocs\Noticias\frontend\web">
                 # use mod_rewrite for pretty URL support
                 RewriteEngine on
@@ -35,12 +37,9 @@ Projeto web de um site de notícias, com um módulo para os administradores faze
 
                 # ...other settings...
             </Directory>
-        < /VirtualHost >
+        </VirtualHost>
        
-      </code>
-
-      <code>
-        < VirtualHost *:80 >
+        <VirtualHost *:80>
             ServerName noticias.localhost
             DocumentRoot "C:\xampp\htdocs\Noticias\backend\web"
             
@@ -58,8 +57,7 @@ Projeto web de um site de notícias, com um módulo para os administradores faze
 
                 # ...other settings...
             </Directory>
-        < /VirtualHost >
-      </code>
-      
-    </ul>
+        </VirtualHost>
+
+   </blockquote>
 
