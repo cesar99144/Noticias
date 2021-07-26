@@ -85,7 +85,7 @@ Projeto web de um site de notícias, com um módulo para os administradores faze
 <h3>Imagens do módulo adm: </h3>
 
 <img src="screens/Postagens.PNG">
-<img src="screens/criarPostagens.PNG"><br>
+<img src="screens/criarPostagem.PNG"><br>
 <img src="screens/AdicionarCategoria.PNG"><br>
 
 <h3>Imagens do módulo visitante: </h3>
