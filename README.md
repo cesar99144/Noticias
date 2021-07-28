@@ -40,7 +40,7 @@ Projeto web de um site de notícias, com um módulo para os administradores faze
         </VirtualHost>
        
         <VirtualHost *:80>
-            ServerName noticias.localhost
+            ServerName dashnoticias.localhost
             DocumentRoot "C:\xampp\htdocs\Noticias\backend\web"
             
             <Directory "C:\xampp\htdocs\Noticias\backend\web">
