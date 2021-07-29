@@ -2,12 +2,14 @@
 
 namespace backend\controllers;
 
+use common\models\Categorias;
 use Yii;
 use common\models\Postagens;
 use common\models\PostagensSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 
 /**
  * PostagensController implements the CRUD actions for Postagens model.
@@ -65,6 +67,8 @@ class PostagensController extends Controller
     public function actionCreate()
     {
         $model = new Postagens();
+        $categorias = Categorias::find()->all();
+        $listaCategorias = ArrayHelper::map($categorias, 'id', 'nome');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,6 +76,7 @@ class PostagensController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'listaCategorias' => $listaCategorias,
         ]);
     }
 
