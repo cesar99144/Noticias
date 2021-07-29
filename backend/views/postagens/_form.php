@@ -4,6 +4,7 @@ use common\models\Categorias;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
+use kartik\select2\Select2;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Postagens */
@@ -19,8 +20,16 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'descricao')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'idCategoria')->widget(Select2::classname(), [
+        'data' => $listaCategorias,
+        'language' => 'de',
+        'options' => ['placeholder' => 'Select a state ...'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
     
-    <?= $form->field($model, 'idCategoria')->dropDownList(ArrayHelper::map(Categorias::find()->all(), 'id', 'nome')) ?>
+    
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
